@@ -1,0 +1,73 @@
+{
+  "kind": "build_request",
+  "title": "Create a simple User Details form with required-field validation (React + TypeScript)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a new frontend page/screen that contains a simple \"User Details\" form implemented in React + TypeScript, with common user fields (at minimum: First name, Last name, Email) and a primary submit button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I need to start with simple User detail form which take input and also validation of required etc in that form with react."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A User Details form is reachable in the app UI (e.g., routed page or main screen).",
+        "Form renders at least these labeled inputs: First name, Last name, Email, plus a Submit button.",
+        "All user-facing text is in English."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement required-field validation for the User Details form, including inline error messages and blocking submission until all required fields are valid.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "...take input and also validation of required etc in that form with react."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Submitting with any required field empty shows an inline validation message near the field.",
+        "Email field validates basic email format and shows an inline validation message when invalid.",
+        "Submit action is prevented while validation errors exist.",
+        "When the form is valid and submitted, the UI shows a clear success state (e.g., success message) and logs/prints the collected values for now (no backend persistence required)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Apply a coherent visual theme across the form screen (typography, spacing, button and input styles) using Tailwind and existing UI components, ensuring consistent layout and accessibility (labels, focus states, and error styling).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form uses consistent spacing, readable typography, and clear hierarchy.",
+        "Inputs have visible focus styles; error states are visually distinct (e.g., border + message).",
+        "All inputs have associated labels; validation messages are readable and placed consistently."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (compose existing components instead).",
+    "Do not edit files listed as immutable: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "No backend changes are required for this initial form; keep this as a frontend-only foundation."
+  ],
+  "nonGoals": [
+    "Internet Identity authentication or user login.",
+    "Persisting user details to the Motoko backend.",
+    "Full CRUD (create/list/edit/delete) flows beyond the single form."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

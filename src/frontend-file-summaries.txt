@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the UserDetailsPage as the primary view.",
+  "frontend/src/pages/UserDetailsPage.tsx": "Page container for the user details form with header, card layout, and footer attribution.",
+  "frontend/src/features/user-details/UserDetailsForm.tsx": "Complete user details form component with first name, last name, and email fields, including real-time validation, error display, and success state handling.",
+  "frontend/src/index.css": "Global styles with customized OKLCH color system using a purple-blue palette (hue 260) for both light and dark modes, with proper contrast ratios.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family and customized design tokens matching the purple-blue color scheme.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend integration is needed."
+}

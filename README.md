@@ -1,2 +1,3 @@
-# create-a-simple-user-details-form-with-required-field-validation-react-typescrip
-Exported from Caffeine project: Create a simple User Details form with required-field validation (React + TypeScript)
+## Create a simple User Details form with required-field validation (React + TypeScript)
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

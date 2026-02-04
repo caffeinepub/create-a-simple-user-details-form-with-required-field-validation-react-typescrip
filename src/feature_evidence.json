@@ -1,0 +1,63 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-new-frontend-page-screen-that-contains-a-simple-user-details-form-implemented-in-react-typescript-with-common-user-fields-at-minimum-first-name-last-name-email-and-a-primary-submit-button",
+      "featureTitle": "Create a new frontend page/screen that contains a simple \"User Details\" form implemented in React + TypeScript, with common user fields (at minimum: First name, Last name, Email) and a primary submit button.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/user-details/UserDetailsForm.tsx",
+        "frontend/src/pages/UserDetailsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-required-field-validation-for-the-user-details-form-including-inline-error-messages-and-blocking-submission-until-all-required-fields-are-valid",
+      "featureTitle": "Implement required-field validation for the User Details form, including inline error messages and blocking submission until all required fields are valid.",
+      "files": [
+        "frontend/src/features/user-details/UserDetailsForm.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-visual-theme-across-the-form-screen-typography-spacing-button-and-input-styles-using-tailwind-and-existing-ui-components-ensuring-consistent-layout-and-accessibility-labels-focus-states-and-error-styling",
+      "featureTitle": "Apply a coherent visual theme across the form screen (typography, spacing, button and input styles) using Tailwind and existing UI components, ensuring consistent layout and accessibility (labels, focus states, and error styling).",
+      "files": [
+        "frontend/src/features/user-details/UserDetailsForm.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/UserDetailsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "User Details form (React + TypeScript) with validation and Tailwind styling",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add a new User Details form screen with First name, Last name, Email fields and a primary Submit button, reachable in the app UI.",
+      "acceptanceCriteria": [
+        "A User Details form is reachable in the app UI (e.g., routed page or main screen).",
+        "Form renders at least these labeled inputs: First name, Last name, Email, plus a Submit button.",
+        "All user-facing text is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/UserDetailsPage.tsx",
+          "operation": "create",
+          "description": "Create the User Details page/screen container with an English title and layout wrapper, and render the UserDetailsForm within it. Use existing shadcn-ui components (e.g., Card) where appropriate to provide a consistent page shell. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/user-details/UserDetailsForm.tsx",
+          "operation": "create",
+          "description": "Implement the React + TypeScript form UI with labeled fields for First name, Last name, and Email plus a primary Submit button. Use existing shadcn-ui components (e.g., Input, Label, Button) to compose the form controls. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Wire the new UserDetailsPage into the app so the form is reachable as the main screen (no additional routes required for this initial foundation)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add required-field and email-format validation with inline errors, prevent invalid submission, and show a success state while logging submitted values.",
+      "acceptanceCriteria": [
+        "Submitting with any required field empty shows an inline validation message near the field.",
+        "Email field validates basic email format and shows an inline validation message when invalid.",
+        "Submit action is prevented while validation errors exist.",
+        "When the form is valid and submitted, the UI shows a clear success state (e.g., success message) and logs/prints the collected values for now (no backend persistence required)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/user-details/UserDetailsForm.tsx",
+          "operation": "modify",
+          "description": "Add client-side validation logic (required checks + basic email format), track touched/submit attempts to decide when to show inline errors, prevent submit when invalid, and on successful submit show an in-UI success message while logging the collected values to the console."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply a coherent Tailwind-based theme and accessible styling (labels, focus states, error styling) using existing UI components and consistent layout.",
+      "acceptanceCriteria": [
+        "Form uses consistent spacing, readable typography, and clear hierarchy.",
+        "Inputs have visible focus styles; error states are visually distinct (e.g., border + message).",
+        "All inputs have associated labels; validation messages are readable and placed consistently."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/user-details/UserDetailsForm.tsx",
+          "operation": "modify",
+          "description": "Apply Tailwind classes and existing shadcn-ui component variants to achieve consistent spacing/typography, clear primary button styling, visible focus rings, and distinct error states; ensure accessible labeling (htmlFor/id), aria-invalid, and consistent placement of error messages. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/UserDetailsPage.tsx",
+          "operation": "modify",
+          "description": "Adjust page-level layout (container width, vertical rhythm, heading hierarchy) with Tailwind to keep the form visually coherent and readable across breakpoints."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Ensure the global Tailwind entry is present (Tailwind base/components/utilities) and add minimal global defaults as needed to support consistent typography and focus styling across the form screen (without modifying files under frontend/src/components/ui)."
+        }
+      ]
+    }
+  ]
+}

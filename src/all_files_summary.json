@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Defines an empty Motoko actor as a placeholder backend with no functionality implemented.",
+  "feature_evidence.json": "Feature evidence report documenting implemented frontend features, related files, dependencies, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of key frontend source files and configuration.",
+  "frontend/index.css": "Tailwind CSS base stylesheet defining global design tokens and color variables for light and dark themes.",
+  "frontend/index.html": "HTML entry point that mounts the React app and loads the main TypeScript bundle.",
+  "frontend/src/App.tsx": "Root React component that renders the UserDetailsPage as the main application view.",
+  "frontend/src/features/user-details/UserDetailsForm.tsx": "React form component collecting first name, last name, and email with validation, error handling, and simulated submission flow.",
+  "frontend/src/hooks/useActor.ts": "Custom React Query hook that creates and caches an authenticated or anonymous backend actor based on Internet Identity state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Authentication context and provider managing Internet Identity login, logout, status tracking, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder module intended for future React Query hooks for backend CRUD operations.",
+  "frontend/src/index.css": "Global Tailwind CSS styles defining a purple-blue themed design system with typography and dark mode support.",
+  "frontend/src/main.tsx": "Application bootstrap that renders the React app with React Query and Internet Identity providers.",
+  "frontend/src/pages/UserDetailsPage.tsx": "Page-level layout that wraps the UserDetailsForm in a styled card with header text and footer attribution.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining dark mode, content paths, container settings, and extensive theme extensions for colors, typography, animations, and UI styling using CSS variables and plugins.",
+  "project_state.json": "Project metadata describing the goal, current features, and requirements for building a simple React + TypeScript user details form with required-field validation and Tailwind-based styling."
+}
